@@ -1,0 +1,157 @@
+.backdropBlur{
+width: 100vw;
+height: 100vh;
+top: 0;
+left: 0;
+position: absolute;
+background-color: rgba(0,0,0,0.3);
+z-index: 1;
+backdrop-filter: blur(4px);
+}
+
+.move {
+  width: 700px;
+  height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: $body;
+  border-radius: 5px;
+  z-index: 2;
+
+
+  -webkit-box-shadow: -1px 3px 9px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: -1px 3px 9px 0px rgba(0,0,0,0.21);
+  box-shadow: -1px 3px 9px 0px rgba(0,0,0,0.12);
+  backdrop-filter: blur(3px);
+}
+
+.move__container {
+  padding: 10px, 10px, 10px, 10px;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.move__text {
+  padding-bottom: 10px;
+}
+
+.move__input {
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+
+.move__buttonContainer {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+
+
+
+   button{
+    margin: 15px 15px 20px 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+    background-color: $wine;
+    color: $yellow;
+    font-family: $fontButton;
+  }
+
+  button:hover{
+    background-color: $yellow;
+    color: $wine;
+  }
+
+  button:active{
+    background-color: $purple;
+    color: $yellow;
+  }
+}
+
+.move__inputContainer {
+  display: flex;
+}
+
+.move__galleryContainer {
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: white;
+  overflow-y: scroll;
+  padding-left: 20px;
+  margin: auto;
+}
+
+.move__galleryContainer__folder{
+  display: flex;
+  align-items: center;
+
+  & p{
+    text-indent: 10px;
+  }
+}
+
+.move__galleryContainer__folder:hover {
+  color: $yellow;
+  cursor: pointer;
+}
+
+.move__galleryContainer__parentButton{
+  margin: 10px 0;
+  font-family: $fontBody;
+  font-size: 15px;
+  text-decoration: underline;
+  font-weight: bold;
+
+  .hello{
+    font-size: 15px;
+    transform: rotate(0.75turn);
+  }
+
+
+}
+
+.move__container__top {
+  border-radius: 5px 5px 0 0;
+  height: 50px;
+  width: 700px;
+  background-color: $wine;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.move__galleryContainer__parentButton:hover{
+  color: $wine;
+}
+
+.move__buttonClose {
+  position: fixed;
+  border-radius: 0 5px 0 0;
+  background: $wine;
+  color: $yellow;
+  cursor: pointer;
+  left: 100%;
+  margin-left: -20px;
+  margin-top: -41px;
+}
+
+.move__buttonClose:hover {
+  background: $yellow;
+  color: $wine;
+}
+
+.move__buttonClose:active {
+  background-color: $purple;
+  color: $yellow;
+}

@@ -1,0 +1,48 @@
+@import './header';
+@import './profile';
+@import './mainmenu';
+
+.main {
+    height: 100vh;
+    background-color: $body;
+    display: grid;
+    grid-template:
+        'mainmenu header profile' 120px
+        'mainmenu content content' auto / 180px 1fr 220px;
+
+    & .mainmenu{
+        grid-area: mainmenu;
+    }
+
+	& .header {
+		grid-area: header;
+	}
+
+	& .profile {
+		grid-area: profile;
+	}
+
+    & .content, .queried-content {
+        grid-area: content;
+        position: relative;
+        &::after, &::before {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+        }
+        &::before {
+            height: 40px;
+            width: 40px;
+            background-color: $yellow;
+        }
+        &::after {
+            height: 80px;
+            width: 80px;
+            background-color: $body;
+            border-radius: 50%;
+        }
+    }
+
+}
